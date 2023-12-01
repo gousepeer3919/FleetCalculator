@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Web Based Fleet Calculator</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="main-nav">
+        <a href="index.html" class="logo">Fleet Calculator</a>
+
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="calculate.html">Calculate</a></li>
+          <li><a href="work.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="sub-nav">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    
+    <!-- <button onclick="addNumbers()">Add</button> -->
+
+
+    
+    <form class="m-5">
+
+      <h1>Calender Dates</h1>
+      <div class="row mb-4">
+        
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="baseyear" class="form-control" placeholder="Base Year" required/>
+          </div>
+        </div>
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="finalyear" class="form-control" placeholder="Final Year of Usage" required/>
+          </div>
+        </div>
+      </div>
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <h1>User Data</h1>
+      <div class="row mb-4">
+        
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="durationofuse" class="form-control" placeholder="Duration of Use" required/>
+          </div>
+        </div>
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="avergaeannualmilleage" class="form-control" placeholder="Average Annual Milleage" required/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Energy Data -->
+
+      <h1>Energy Data</h1>
+
+      <div class="row mb-4">
+        
+    
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="fuelcosts" class="form-control" placeholder="Fuel Costs" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="co2costs" class="form-control" placeholder="Co2 Costs" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="adbluecosts" class="form-control" placeholder="Ad Blue Costs" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="electricitycosts" class="form-control" placeholder="Electricity Costs" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="h2costs" class="form-control" placeholder="H2 Costs" required/>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Infrastructure Data -->
+      <h1>Infrastructure Data</h1>
+      <!-- Text input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="number" id="infele" class="form-control" placeholder="Infrastructure costs for electric charging stations" required/>
+      </div>
+
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="number" id="infhyd" class="form-control" placeholder="Infrastructure costs hydrogen filling station" required/>
+      </div>
+    
+      <!--Basic Costs -->
+      <h1>Basic costs</h1>
+
+      <div class="row mb-4">
+        
+    
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="drivepowerinkw" class="form-control" placeholder="Drive Power in Kw" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            <input type="number" id="rangeinkm" class="form-control" placeholder="Range in Km" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="reserveinkm" class="form-control" placeholder="Reserve in Km" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="consumption" class="form-control" placeholder="Consumption(150kwh/km)" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="costoftruck" class="form-control" placeholder="Cost of truck" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="perofdep" class="form-control" placeholder="% of depreciation in 5yrs" required/>
+          </div>
+        </div>
+
+      </div>
+    
+      <!-- Operation Costs -->
+      <h1>Operation Costs</h1>
+
+      <div class="row mb-4">
+        
+    
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="energycosts" class="form-control" placeholder="Energy Costs per year" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="maintainancecosts" class="form-control" placeholder="Maintainance Costs per Year" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="wheels" class="form-control" placeholder="Wheels/Tyres cost per Year" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="taxes" class="form-control" placeholder="Taxes per Year" required/>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row mb-4">
+        
+    
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="insurance" class="form-control" placeholder="Insurance per Year" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="great" class="form-control" placeholder="Great per Km" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="distanceshare" class="form-control" placeholder="Distance Share per Km" required/>
+          </div>
+        </div>
+
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            
+            <input type="number" id="co2consumption" class="form-control" placeholder="Co2Consumption per Km" required/>
+          </div>
+        </div>
+
+      </div>
+    
+      <!-- Submit button -->
+      <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4"  onclick="performOperations()">Calcalate</button>
+    </form>
+
+    <p id="result"></p>
+
+
+  </body>
+</html>
+
