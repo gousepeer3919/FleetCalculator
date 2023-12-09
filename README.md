@@ -8,7 +8,6 @@ The Fleet Calculator Website is a tool designed to calculate and analyze the Tot
 
 - Calculate TCO for various vehicles in a fleet.
 - Input and customize cost parameters, including fuel, maintenance, insurance, and more.
-- Visualize cost breakdowns through interactive charts.
 - Compare TCO between different vehicles or scenarios.
 - User-friendly interface for easy navigation and input.
 
@@ -21,4 +20,4 @@ Check out the live demo of the Fleet Calculator Website [here](https://gousepeer
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/fleet-calculator.git
+   git clone https://github.com/gousepeer3919/fleet-calculator.git
