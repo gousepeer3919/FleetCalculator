@@ -20,4 +20,4 @@ Check out the live demo of the Fleet Calculator Website [here](https://gousepeer
 1. Clone the repository:
 
 
-   git clone https://github.com/gousepeer3919/fleetCalculator.git
+   git clone https://github.com/gousepeer3919/FleetCalculator.git
